@@ -19,7 +19,6 @@ public class collision : MonoBehaviour
             print("in");
             if (Input.GetKey(KeyCode.LeftArrow))
             {
-                /*this.transform.Translate(new Vector3(-10f, 0f, 0f) * Time.deltaTime, Space.World);*/
                 GoToParametres();
             }
         }
