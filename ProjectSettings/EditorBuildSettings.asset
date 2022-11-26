@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Tube.unity
+    guid: c33a907eb45a0e74a8bc13d73db53f98
+  - enabled: 1
+    path: Assets/Scenes/Transition.unity
+    guid: ad98653adbd4bc443ba81174d5e2ce29
   m_configObjects: {}
