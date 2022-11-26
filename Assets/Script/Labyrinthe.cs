@@ -12,12 +12,17 @@ public class Labyrinthe : MonoBehaviour
     public string[] lines;
 
     public Vector3 position;
+
+    [SerializeField] private string m_mazeName = "Saved_labyrinthe";
     
     // Start is called before the first frame update
     void Start()
     {
+        // Load the .txt from resources
+        TextAsset textAsset = Resources.Load<TextAsset>(m_mazeName);
         
-        lines = File.ReadAllLines(@"D:\UnityGames\GameJam_Labyrinthe\Assets\Saved_labyrinthe.txt");
+        // Split on the line return
+        lines = textAsset.text.Split('\n');
 
         int size_map = lines[0].Length;
 
