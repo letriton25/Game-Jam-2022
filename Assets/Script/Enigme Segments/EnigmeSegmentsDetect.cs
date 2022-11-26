@@ -10,7 +10,8 @@ public class EnigmeSegmentsDetect : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         print("segments");
-        canvasSegments.gameObject.SetActive(true);
+        if (other.CompareTag("Player"))
+            canvasSegments.gameObject.SetActive(true);
     }
     
     private void OnTriggerExit(Collider other)
