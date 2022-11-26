@@ -12,6 +12,8 @@ public class Deplacements : MonoBehaviour
     
     public Camera mainCamera;
 
+    public bool is_ortho = false;
+
     private bool is_collison = false;
 
     public Vector3 lastPos;
@@ -63,9 +65,19 @@ public class Deplacements : MonoBehaviour
 
     public void orthographic_vision()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            mainCamera.orthographic = true;
+            if (is_ortho)
+            {
+                mainCamera.orthographic = false;
+                is_ortho = false;
+            }
+            else
+            {
+                mainCamera.orthographic = true;
+                is_ortho = true;
+            }
+            
         }
     }
 
