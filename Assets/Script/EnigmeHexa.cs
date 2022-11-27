@@ -13,30 +13,31 @@ public class EnigmeHexa : MonoBehaviour
         Debug.Log("ahhhh");
         combination = new int[9];
     }
-    int numberFromName() {
-        string name = gameObject.name;
-        int number = int.Parse(name.Substring(name.Length - 1));
-        return number;
+    int numberFromName(string name) {
+        return int.Parse(name);
     }
 
-    public void Trigger() {
-        Debug.Log(combination);
-        if (combination.Length < solution.Length - 1) { 
-            combination[index] = numberFromName();
-            index++;
-        } 
+    public void Trigger(string name) {
+        if (index < solution.Length - 1) { 
+            combination[index] = numberFromName(name);
+            
+        } else {
+            index = 0;
+            combination[index] = numberFromName(name);
+        }
+        index++;
     }
 
-    public void validate() {
-        if (combination.Length != solution.Length) {
-            return;
+    public bool validate() {
+        if (index != solution.Length) {
+            return false;
         }
         for (int i=0; i < solution.Length; i++) {
             if (solution[i] != combination[i]) {
-                Debug.Log("non");
+                return false;
             }
         }
-        Debug.Log("oui");
+        return true;
     }
 
     

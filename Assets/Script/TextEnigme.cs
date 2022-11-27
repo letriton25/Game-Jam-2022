@@ -15,19 +15,22 @@
                 if (_title.text.Length <= 9){
                     _title.text += "*";
                 }
+                else {
+                    _title.text = "*";
+                }
             }else {
                 _title.text = string.Empty;
             }
 
         }
         public void OnButtonClickValidate() { 
-            GameObject obj = GameObject.Find("EnigmeHexa");
+            GameObject obj = GameObject.Find("Enigme");
             EnigmeHexa enigme = obj.GetComponent<EnigmeHexa>();
             if (enigme.validate()) {
-                _title.text = "SUCCES";
+                _title.text = "SUCCES   ";
             } 
             else {
-                _title.text = "ECHEC";
+                _title.text = "ECHEC     ";
             }
         }
     }
