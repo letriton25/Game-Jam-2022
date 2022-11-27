@@ -23,14 +23,6 @@ public class Deplacements : MonoBehaviour
         m_rigid = gameObject.GetComponent<Rigidbody>();
     }
 
-
-    public void KeyDeplacement()
-    {
-        
-        
-        
-    }
-
     public void KeyZoom()
     {
         if (Input.GetKey(KeyCode.Z))
@@ -76,7 +68,7 @@ public class Deplacements : MonoBehaviour
         //KeyRotation();
         
         //if (gameObject.)
-        m_rigid.AddForce(m_Input * 100f, ForceMode.Force);
+        m_rigid.AddForce(m_Input * -100f, ForceMode.Force);
         KeyZoom();
     }
 }

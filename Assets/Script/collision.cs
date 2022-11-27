@@ -8,7 +8,7 @@ public class collision : MonoBehaviour
 {
     public GameObject Cam;
     public GameObject Square;
-    public void GoToParametres()
+    private void GoToParametres()
     {
         StartCoroutine(Parametres());
     }
