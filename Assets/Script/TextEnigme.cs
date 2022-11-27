@@ -26,7 +26,7 @@
         public void OnButtonClickValidate() { 
             GameObject obj = GameObject.Find("Enigme");
             EnigmeHexa enigme = obj.GetComponent<EnigmeHexa>();
-            if (enigme.validate()) {
+            if (enigme.Validate()) {
                 _title.text = "SUCCES   ";
             } 
             else {

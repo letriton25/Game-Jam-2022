@@ -19,7 +19,7 @@ public class square_pointless : MonoBehaviour
     public IEnumerator Delay()
     {
         yield return new WaitForSeconds(1f);
-        transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
+        
         start = true;
     }
 
@@ -29,6 +29,7 @@ public class square_pointless : MonoBehaviour
     }
     private void Start()
     {
+        transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
         WaitToPlay();
     }
 
@@ -72,6 +73,7 @@ public class square_pointless : MonoBehaviour
                 perso.SetActive(true);
                 createGame.SetActive(false);
                 gameDetector.SetActive(false);
+                WaitToPlay();
             }
         }
         

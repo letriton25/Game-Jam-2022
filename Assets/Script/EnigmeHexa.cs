@@ -9,6 +9,9 @@ public class EnigmeHexa : MonoBehaviour
     public int[] solution = {1,2,7,2,5,5,2,1,2};
     private int index = 0;
 
+    public GameObject door;
+    public Canvas canvas;
+
     public void Start() {
         Debug.Log("ahhhh");
         combination = new int[9];
@@ -18,7 +21,7 @@ public class EnigmeHexa : MonoBehaviour
     }
 
     public void Trigger(string name) {
-        if (index < solution.Length - 1) { 
+        if (index < solution.Length) { 
             combination[index] = numberFromName(name);
             
         } else {
@@ -28,8 +31,15 @@ public class EnigmeHexa : MonoBehaviour
         index++;
     }
 
-    public bool validate() {
+    public void DestroyWall()
+    {
+        Validate();
+    }
+
+    public bool Validate() {
         if (index != solution.Length) {
+            print(index);
+            print(solution.Length);
             return false;
         }
         for (int i=0; i < solution.Length; i++) {
@@ -37,6 +47,8 @@ public class EnigmeHexa : MonoBehaviour
                 return false;
             }
         }
+        door.SetActive(false);
+        canvas.gameObject.SetActive(false);
         return true;
     }
 
