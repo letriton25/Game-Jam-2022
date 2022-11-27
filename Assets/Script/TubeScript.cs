@@ -29,7 +29,7 @@ public class TubeScript : MonoBehaviour
     string text4 = "Veux-tu découvrir cette nouvelle dimension ?";
     string text5 = "Essaye de tourner à gauche et à droite.";
     string text6 = "Ahh oui c'est vrai, tu ne sais pas encore ce que ça veut dire.";
-    string text7 = "Tu ne peux qu'avancer et reculer";
+    string text7 = "Pour le moment, tu ne peux qu'avancer et reculer";
     string text8 = "Maintenant tu peux te déplacer dans d'autres directions ";
     string text9 = "(Appuyer flèche gauche/droite pour changer de direction)";
 
