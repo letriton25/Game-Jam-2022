@@ -69,6 +69,6 @@ public class Deplacements : MonoBehaviour
         
         //if (gameObject.)
         m_rigid.AddForce(m_Input * -100f, ForceMode.Force);
-        KeyZoom();
+        //KeyZoom();
     }
 }
