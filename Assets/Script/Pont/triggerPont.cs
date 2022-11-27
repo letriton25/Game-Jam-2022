@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class triggerPont : MonoBehaviour
 {
-    public GameObject controlKeysImage;
+    public GameObject controlKeysCanvas;
 
     void OnTriggerEnter(Collider col)
     {
         if(col.gameObject.transform.name == "player"){
-            controlKeysImage.SetActive(true);
+            controlKeysCanvas.SetActive(true);
             col.gameObject.GetComponent<scalingPont>().scalingCoef = 1;
         }
     }
@@ -17,7 +17,7 @@ public class triggerPont : MonoBehaviour
     void OnTriggerExit(Collider col)
     {
         if(col.gameObject.transform.name == "player"){
-            controlKeysImage.SetActive(false);
+            controlKeysCanvas.SetActive(false);
             col.gameObject.GetComponent<scalingPont>().scalingCoef = 0;
         }
     }

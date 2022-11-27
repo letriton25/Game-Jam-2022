@@ -5,4 +5,9 @@ using UnityEngine;
 public class ground : MonoBehaviour
 {
     public GameObject spawn;
+
+    void OnCollisionEnter(Collision col)
+    {
+        col.gameObject.transform.position = spawn.transform.position;
+    }
 }

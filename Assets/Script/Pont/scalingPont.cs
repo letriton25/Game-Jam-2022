@@ -11,8 +11,12 @@ public class scalingPont : MonoBehaviour
 
     void Update()
     {
-        pont.transform.localScale = new Vector3(pont.transform.localScale.x + scalingSpeed * scalingCoef * Input.GetAxis("Scale") * Time.deltaTime, 1, 1);
+        pont.transform.localScale = new Vector3(
+            pont.transform.localScale.x + scalingSpeed * scalingCoef * Input.GetAxis("Scale") * Time.deltaTime,
+            pont.transform.localScale.y,
+            pont.transform.localScale.z
+        );
         if(pont.transform.localScale.x <= 0)
-            pont.transform.localScale = new Vector3(0, 1, 1);
+            pont.transform.localScale = new Vector3(0, pont.transform.localScale.y, pont.transform.localScale.z);
     }
 }
