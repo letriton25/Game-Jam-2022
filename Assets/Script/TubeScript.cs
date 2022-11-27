@@ -27,10 +27,11 @@ public class TubeScript : MonoBehaviour
     string text2 = "Je me présente, je suis A.Square";
     string text3 = "Je viens de la dimension supérieure, le monde à 2 dimensions.";
     string text4 = "Veux-tu découvrir cette nouvelle dimension ?";
-    string text5 = "ENTRE dans mon corps et tu pourras découvrir de nouvelles directions !!";
-    string text6 = "Tu ne pouvais qu'avancer et reculer";
-    string text7 = "Maintenant tu peux te déplacer dans d'autres directions ";
-    string text8 = "(Appuyer flèche gauche/droite pour changer de direction)";
+    string text5 = "Essaye de tourner à gauche et à droite.";
+    string text6 = "Ahh oui c'est vrai, tu ne sais pas encore ce que ça veut dire.";
+    string text7 = "Tu ne peux qu'avancer et reculer";
+    string text8 = "Maintenant tu peux te déplacer dans d'autres directions ";
+    string text9 = "(Appuyer flèche gauche/droite pour changer de direction)";
 
 
     string[] text11, text12, text13, text14, text15, text16, text17, text18;
@@ -133,6 +134,7 @@ public class TubeScript : MonoBehaviour
         firstlist.Add(text6.Split(separator));
         firstlist.Add(text7.Split(separator));
         firstlist.Add(text8.Split(separator));
+        firstlist.Add(text9.Split(separator));
 
         StartCoroutine(DisplayText());
     }
