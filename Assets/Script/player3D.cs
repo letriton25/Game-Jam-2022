@@ -17,8 +17,8 @@ public class player3D : MonoBehaviour
 
     void Update()
     {
+        //déplacement du personnage
         m_Input = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Jump") * jumpCoef * jumpForce, Input.GetAxis("Vertical"));
-
     }
 
     // Update is called once per frame
