@@ -18,7 +18,7 @@ public class Lampe : MonoBehaviour
         {
             moveCam = true;
             
-            stopMouv = mainCamera.orthographicSize + 3f;
+            stopMouv = mainCamera.orthographicSize + 1f;
         }
     }
 
