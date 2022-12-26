@@ -26,6 +26,7 @@ public class EnigmeHexa : MonoBehaviour
             
         } else {
             index = 0;
+            combination = new int[9];
             combination[index] = numberFromName(name);
         }
         index++;
